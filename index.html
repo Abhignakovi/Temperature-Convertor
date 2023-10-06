@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <div class="container-area">
+        <div id="temperatureInput" class="container-field">
+          <div class="input-area">
+            <div class="input-label">
+              <label for="fromUnit">From:</label>
+            </div>
+            <select name="temperature-from" class="select-box" id="fromUnit">
+              <option selected value="Celsius">Celsius</option>
+              <option value="Fahrenheit">Fahrenheit</option>
+              <option value="Kelvin">Kelvin</option>
+              <option value="Rankine">Rankine</option>
+            </select>
+            <input
+              id="inputTemperature"
+              placeholder="Input"
+              type="text"
+              name="from-temperature"
+              min="0"
+              class="input-field"
+            />
+          </div>
+          <div class="input-area">
+            <div class="input-label">
+              <label for="toUnit">To:</label>
+            </div>
+            <select name="to-from" class="select-box" id="toUnit">
+              <option value="Celsius">Celsius</option>
+              <option value="Fahrenheit">Fahrenheit</option>
+              <option selected value="Kelvin">Kelvin</option>
+              <option value="Rankine">Rankine</option>
+            </select>
+            <input
+              readonly
+              id="outputTemperature"
+              placeholder="Output"
+              type="number"
+              name="to-temperature"
+              min="0"
+              class="input-field"
+            />
+          </div>
+
+          <div class="input-area">
+            <button onclick="TemperatureReset()" class="btn btn-reset">
+              Reset
+            </button>
+            <button onclick="TemperatureCalculate()" class="btn btn-calculate">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="temp.js"></script>
+  </body>
+</html>
